@@ -9,9 +9,9 @@ export default function Activities() {
     <>
       <h1 className="profile">Activities</h1>
       <div className="page-body">
-        <div className="activities">
+        <div className="posts">
           {activities.map((activity) => (
-            <div className="activity-post" key={activity.id}>
+            <div className="post" key={activity.id}>
               <h2>{activity.name}</h2>
               <p className="description">{activity.description}</p>
               <Link to={`/activities/${activity.id}`}>View Activity</Link>

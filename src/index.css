@@ -1,11 +1,39 @@
+a:visited {
+  color: rgb(145, 19, 19);
+}
+a:hover {
+  color: black;
+}
+
 #nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: -0.5rem;
   padding: 1.5rem;
   background-color: rgba(177, 177, 177, 0.676);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: larger;
 }
-#nav > * {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.nav-links {
+  padding-right: 25px;
+  display: flex;
+}
+.nav-links > a {
+  text-decoration: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+#posts {
+  display: flex;
+  justify-content: center;
+}
+.post {
+  border: 2px solid rgb(145, 19, 19);
+  border-radius: 4px;
+  box-shadow: 0 0.5rem 1rem;
+  margin: 2rem;
+  padding: 1rem;
+  background-color: rgba(177, 177, 177, 0.676);
 }
