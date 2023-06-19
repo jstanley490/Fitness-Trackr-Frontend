@@ -1,8 +1,16 @@
+body {
+  margin: 0;
+}
 a:visited {
   color: rgb(145, 19, 19);
 }
 a:hover {
   color: black;
+}
+
+#root {
+  margin: 0 auto;
+  background-color: rgb(34, 36, 39);
 }
 
 #nav {
@@ -11,7 +19,7 @@ a:hover {
   align-items: center;
   margin: -0.5rem;
   padding: 1.5rem;
-  background-color: rgba(177, 177, 177, 0.676);
+  background-color: rgba(195, 195, 195, 0.676);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: larger;
 }
@@ -25,6 +33,44 @@ a:hover {
   padding-right: 0.5rem;
 }
 
+.body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.auth {
+  padding: 1rem;
+  margin: 8rem;
+  box-shadow: 4px 4px 6px 2px grey;
+  border-radius: 6px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.auth > form > input {
+  margin: 8px;
+}
+#create-form {
+  height: max-content;
+  padding: 1rem;
+  margin-right: 0.75rem;
+  border-radius: 6px;
+  position: sticky;
+  top: 0.75rem;
+
+  background-color: whitesmoke;
+}
+.form {
+  display: grid;
+  gap: 8px;
+}
+
+.heading {
+  margin-left: 2rem;
+}
+
 #posts {
   display: flex;
   justify-content: center;
@@ -32,8 +78,17 @@ a:hover {
 .post {
   border: 2px solid rgb(145, 19, 19);
   border-radius: 4px;
-  box-shadow: 0 0.5rem 1rem;
+  box-shadow: 0 0.5rem 1rem rgb(97, 97, 97);
   margin: 2rem;
   padding: 1rem;
   background-color: rgba(177, 177, 177, 0.676);
+}
+
+.activity-name {
+  font-weight: medium;
+  font-style: italic;
+  font-size: large;
+}
+.act-list {
+  font-size: 0.9rem;
 }

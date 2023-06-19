@@ -38,7 +38,6 @@ export default function Login() {
       return;
     }
     localStorage.setItem("token", result.token);
-    console.log(result);
     setToken(result.token);
     navigate("/my-routines");
   }

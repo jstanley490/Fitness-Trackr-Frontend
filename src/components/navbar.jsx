@@ -6,25 +6,16 @@ export default function Navbar({ token }, { setToken }, setUser) {
     setToken("");
     setUser({});
   }
-  // return (
-  //   <div id="nav">
-  //     <Link to={"/"}>Home</Link>
-  //     <Link to={"/routines"}>Routines</Link>
-  //     <Link to={"/my_routines"}>My Routines</Link>
-  //     <Link to={"/activities"}>Activities</Link>
-  //     <Link to={"/login"}>Login</Link>
-  //     <Link to={"/register"}>Register</Link>
-  //   </div>
-  // );
+
   return (
     <div id="nav">
       <p id="logo">Fitness Trakr</p>
       <span className="nav-links">
         <Link to={"/"}>Home</Link>
         <Link to={"/routines"}>Routines</Link>
-        <Link to={"/my-routines"}>My Routines</Link>
         <Link to={"/activities"}>Activities</Link>
-        {/* {token && <Link to={"/profile"}>Profile</Link>} */}
+        {token ? <Link to={"/my-routines"}>My Routines</Link> : null}
+
         {token ? (
           <Link onClick={logout} to={"/"}>
             Logout

@@ -1,24 +1,50 @@
-import { useState } from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
+import CreateActivity from "./create_activity";
 
 export default function Activities() {
-  // activities include = id, name, description
-  const { user, token, activities, setActivities } = useOutletContext();
+  const { token, activities } = useOutletContext();
+  // console.log(activities);
 
   return (
     <>
-      <h1 className="profile">Activities</h1>
-      <div className="page-body">
-        <div className="posts">
-          {activities.map((activity) => (
-            <div className="post" key={activity.id}>
-              <h2>{activity.name}</h2>
-              <p className="description">{activity.description}</p>
-              <Link to={`/activities/${activity.id}`}>View Activity</Link>
+      {token ? (
+        <div className="body">
+          <main>
+            <h1 className="heading">Activities</h1>
+            <div className="page-body">
+              <div className="posts">
+                {activities.map((activity) => (
+                  <div className="post" key={activity.id}>
+                    <h2>{activity.name}</h2>
+                    <p className="description">
+                      Description: {activity.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+          </main>
+          <aside id="create-form">
+            <CreateActivity />
+          </aside>
         </div>
-      </div>
+      ) : (
+        <>
+          <h1 className="heading">Activities</h1>
+          <div className="page-body">
+            <div className="posts">
+              {activities.map((activity) => (
+                <div className="post" key={activity.id}>
+                  <h2>{activity.name}</h2>
+                  <p className="description">
+                    Description: {activity.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 }

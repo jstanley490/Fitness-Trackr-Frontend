@@ -6,7 +6,7 @@ export default function Routines() {
   // console.log(routines)
   return (
     <>
-      <h1 className="profile">Routines</h1>
+      <h1 className="heading">Routines</h1>
       <div className="page-body">
         <div className="posts">
           {routines.map((routine) =>
@@ -25,8 +25,18 @@ export default function Routines() {
                     <h3>Activities:</h3>
                     {routine.activities.map((activity) => {
                       return (
-                        <ul key={activity.id}>
-                          <li>{activity.name}</li>
+                        <ul className="act-list" key={activity.id}>
+                          <li>
+                            <span className="activity-name">
+                              {activity.name}
+                            </span>
+                            <br />
+                            <strong>description:</strong> {activity.description}
+                            <br />
+                            <strong>count:</strong> {activity.count}
+                            <br />
+                            <strong>duration:</strong> {activity.duration}
+                          </li>
                         </ul>
                       );
                     })}
