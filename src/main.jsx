@@ -10,7 +10,7 @@ import My_Routines from "./components/my_routines";
 import Activities from "./components/activities";
 import Login from "./components/login";
 import Register from "./components/register";
-import ActivitySingle from "./components/activity_single";
+import UpdateRoutine from "./components/update_routine";
 
 const router = createBrowserRouter([
   {
@@ -35,8 +35,8 @@ const router = createBrowserRouter([
         element: <Activities />,
       },
       {
-        path: "/:activityId",
-        element: <ActivitySingle />,
+        path: "/:routineId",
+        element: <UpdateRoutine />,
       },
       {
         path: "/login",

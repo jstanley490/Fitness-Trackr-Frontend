@@ -11,7 +11,7 @@ export default function Root() {
   const [token, setToken] = useState("");
   const [user, setUser] = useState({});
 
-  // console.log(token);
+  // console.log(routines);
   // console.log(user);
 
   useEffect(() => {
@@ -47,7 +47,6 @@ export default function Root() {
           }
         );
         const routines = await response.json();
-        console.log(routines);
         setMyRoutines(routines);
       }
     }
