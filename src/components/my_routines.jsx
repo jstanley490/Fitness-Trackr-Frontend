@@ -20,14 +20,22 @@ export default function My_Routines() {
             {myRoutines.map((routine) => {
               if (routine.creatorId === user.id) {
                 return (
-                  <li key={routine.id}>
-                    <span className="activity-name">{routine.name}</span>
-                    <br />
-                    <strong>goal:</strong> {routine.goal}
-                    <br />
-                    {routine.isPublic ? <>Public</> : <>Private</>}
-                    <br />
-                    <strong>creator:</strong> {routine.creatorName}
+                  <li className="post" key={routine.id}>
+                    <div>
+                      <span className="activity-name">{routine.name}</span>
+                      <br />
+                      <strong>goal:</strong> {routine.goal}
+                      <br />
+                      {routine.isPublic ? <>Public</> : <>Private</>}
+                      <br />
+                      <strong>creator:</strong> {routine.creatorName}
+                    </div>
+                    <div className="post-buttons">
+                      <button>delete routine</button>
+                      <button>update routine</button>
+                      <button>update activities</button>
+                      <button>remove activities</button>
+                    </div>
                   </li>
                 );
               }

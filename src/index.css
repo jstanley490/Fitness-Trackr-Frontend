@@ -1,6 +1,9 @@
 body {
   margin: 0;
 }
+h1 {
+  color: whitesmoke;
+}
 a:visited {
   color: rgb(145, 19, 19);
 }
@@ -52,6 +55,9 @@ a:hover {
 .auth > form > input {
   margin: 8px;
 }
+#login {
+  color: black;
+}
 #create-form {
   height: max-content;
   padding: 1rem;
@@ -78,10 +84,19 @@ a:hover {
 .post {
   border: 2px solid rgb(145, 19, 19);
   border-radius: 4px;
-  box-shadow: 0 0.5rem 1rem rgb(97, 97, 97);
+  box-shadow: 0 0.5rem 1rem rgb(65, 33, 33);
   margin: 2rem;
   padding: 1rem;
   background-color: rgba(177, 177, 177, 0.676);
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.post-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .activity-name {

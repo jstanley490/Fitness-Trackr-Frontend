@@ -48,7 +48,7 @@ export default function Register() {
   }
   return (
     <div className="auth">
-      <h1>Register</h1>
+      <h1 id="login">Register</h1>
       <form onSubmit={handleSubmit}>
         <input
           onChange={(e) => setUsername(e.target.value)}

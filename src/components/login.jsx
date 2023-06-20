@@ -43,7 +43,7 @@ export default function Login() {
   }
   return (
     <div className="auth">
-      <h1>Login</h1>
+      <h1 id="login">Login</h1>
       <form onSubmit={handleSubmit}>
         <input
           onChange={(e) => setUsername(e.target.value)}
